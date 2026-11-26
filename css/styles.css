@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: #eef1f6;
+  color: #1d2433;
+}
+.app { max-width: 600px; margin: 0 auto; padding: 24px 16px; }
+.card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
+.meta { display: flex; justify-content: space-between; margin: 0 0 8px; color: #555; }
+.answers { display: grid; gap: 10px; margin: 16px 0; }
+button {
+  font: inherit;
+  padding: 12px 16px;
+  border: 2px solid #c5cbd8;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+#start-btn, #next-btn, #restart-btn { background: #2d4fa3; border-color: #2d4fa3; color: #fff; text-align: center; }
+.answers button:not(:disabled):hover { border-color: #2d4fa3; }
+.answers button:disabled { cursor: default; opacity: 1; color: inherit; }
+.answers button.correct { background: #2e9e57; border-color: #2e9e57; color: #fff; }
+.answers button.wrong { background: #d64545; border-color: #d64545; color: #fff; }
+button:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+.results { padding-left: 20px; }
+.results li { margin-bottom: 12px; }
+.results .ok { color: #1f7a3f; }
+.results .fail { color: #b83232; }
